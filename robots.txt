@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Sitemap: https://sbiloancalculator.github.io/sitemap.xml
+
+# Allow all bots to crawl important pages
+Allow: /about.html
+Allow: /contact.html
+Allow: /terms.html
+Allow: /privacy.html
+Allow: /disclaimer.html
+Allow: /dmca.html
+
+# Prevent crawling of any future admin or system pages
+Disallow: /admin/
+Disallow: /system/
+Disallow: /temp/ 
