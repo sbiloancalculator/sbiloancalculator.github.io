@@ -173,13 +173,17 @@
 
     <!-- Preload essential resources -->
     <link rel="preload" href="https://cdn.tailwindcss.com?v=3.4.1" as="script">
-    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="style.min.css" as="style">
     <link rel="preload" href="script.js" as="script">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style">
 
     <!-- Replace Tailwind CDN with minified production build -->
     <script src="https://cdn.tailwindcss.com?v=3.4.1"></script>
-    <link rel="stylesheet" href="style.css">
+    <!-- Load minified CSS first for faster loading -->
+    <link rel="stylesheet" href="style.min.css">
+    <!-- Load full CSS as fallback and for development -->
+    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="style.css"></noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body class="bg-gray-50 dark:bg-gray-900 js-loading">
