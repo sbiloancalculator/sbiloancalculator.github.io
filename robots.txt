@@ -1,16 +1,51 @@
+# SBI Loan Calculator robots.txt
+# https://sbiloancalculator.github.io
+
+# Allow all bots to access the site
 User-agent: *
 Allow: /
-Sitemap: https://sbiloancalculator.github.io/sitemap.xml
 
-# Allow all bots to crawl important pages
+# Important pages - explicitly allow
+Allow: /index.html
 Allow: /about.html
 Allow: /contact.html
 Allow: /terms.html
 Allow: /privacy.html
 Allow: /disclaimer.html
 Allow: /dmca.html
+Allow: /404.html
 
-# Prevent crawling of any future admin or system pages
-Disallow: /admin/
-Disallow: /system/
-Disallow: /temp/ 
+# Allow access to resources
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.ico$
+Allow: /site.webmanifest
+Allow: /sitemap.xml
+Allow: /robots.txt
+
+# Temporary files and development artifacts
+Disallow: /*.tmp$
+Disallow: /*.log$
+Disallow: /*.bak$
+Disallow: /*.swp$
+Disallow: /*.DS_Store$
+
+# Crawl delay for heavy bots
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# Sitemaps
+Sitemap: https://sbiloancalculator.github.io/sitemap.xml
+
+# Host preference
+Host: https://sbiloancalculator.github.io
